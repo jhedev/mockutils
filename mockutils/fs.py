@@ -74,7 +74,7 @@ class VirtualFS(object):
 
     def chdir(self, path):
         if self.exists(path):
-            self.cwd = path
+            self.cwd = self.absolute_path(path)
         else:
             raise FileNotFoundError
 
