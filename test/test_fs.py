@@ -40,6 +40,7 @@ class VirtualFSTest(unittest.TestCase):
     def test_absolute_path_with_dot(self):
         self.assertEqual(self.fs1.absolute_path('./b/c'), '/b/c')
         self.assertEqual(self.fs1.absolute_path('./b/./c'), '/b/c')
+        self.assertEqual(self.fs1.absolute_path('.'), '/')
 
     def test_absolute_path_with_dots(self):
         self.assertEqual(self.fs1.absolute_path('..'), '/')
