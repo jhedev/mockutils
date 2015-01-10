@@ -107,3 +107,6 @@ class _MockOSPath(object):
 
     def exists(self, path):
         return self.fs.exists(path)
+
+    def abspath(self, path):
+        return self.fs.absolute_path(path)
